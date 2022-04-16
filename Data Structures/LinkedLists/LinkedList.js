@@ -105,6 +105,7 @@ class LinkedList {
   }
 
   getKthNodeFromTheEnd(k) {
+    if (this.isEmpty()) return;
     if (k <= 0) return;
     let index = 0;
     let start = this.first;
