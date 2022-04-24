@@ -1,4 +1,4 @@
-class Queue {
+export default class Queue {
   constructor() {
     this.items = [];
     this.front;
@@ -17,7 +17,9 @@ class Queue {
   }
 
   dequeue() {
+    let temp = this.items[this.front];
     this.front = ++this.frontIndex;
+    return temp;
   }
 
   isEmpty() {
@@ -41,12 +43,12 @@ class Queue {
   }
 }
 
-let queue = new Queue();
-queue.enqueue(10);
-queue.enqueue(20);
-queue.enqueue(30);
-queue.dequeue();
-queue.dequeue();
-queue.dequeue();
-queue.print();
+// let queue = new Queue();
+// queue.enqueue(10);
+// queue.enqueue(20);
+// queue.enqueue(30);
+// queue.dequeue();
+// queue.dequeue();
+// queue.dequeue();
+// queue.print();
 // console.log(queue.reverse())
